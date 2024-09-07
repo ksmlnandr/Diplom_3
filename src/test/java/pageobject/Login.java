@@ -1,7 +1,12 @@
 package pageobject;
 
-public class Login {
-    CommonLinks commonLinks;
+import org.openqa.selenium.By;
 
-    private final String PAGE_LOGIN = commonLinks.getMAIN_PAGE_URL() + "/login";
+public class Login {
+    Constructor constructor;
+
+    private final String PAGE_LOGIN = constructor.getMAIN_PAGE_URL() + "/login";
+
+    private By signUpOptionButton = By.xpath(".//*[contains(@href,'register')]");
+
 }
