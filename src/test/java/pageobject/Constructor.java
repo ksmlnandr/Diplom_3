@@ -13,7 +13,11 @@ import static org.junit.Assert.*;
 
 public class Constructor {
     private WebDriver driver;
-    private final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
+    private String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
+    private By profileButton = By.xpath(".//*[contains(@href,'account')]");
+    private By loader = By.className("Modal_modal_overlay__x2ZCr");
+    private String tab = "span";
+    private String listHeader = "h2";
 
     public Constructor(WebDriver driver) {
         this.driver = driver;
@@ -23,19 +27,12 @@ public class Constructor {
         return MAIN_PAGE_URL;
     }
 
-    private By profileButton = By.xpath(".//*[contains(@href,'account')]");
-    private By loader = By.className("Modal_modal_overlay__x2ZCr");
-
-    private String tab = "span";
-    private String listHeader = "h2";
-    private boolean isList;
-
     private By elemConstructor(String pathElement, String burgerElement, boolean isList) {
         String xPath = String.format(".//%s[text() ", pathElement);
         xPath = xPath + String.format("= '%s']",burgerElement);
         By path = By.xpath(xPath);
 
-            if (pathElement == "h2" && isList) {
+            if (pathElement.equals("h2") && isList) {
             By listPath = By.xpath("(" + xPath + "/parent::div)/ul");
             return listPath;
         } else {

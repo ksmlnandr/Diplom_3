@@ -5,12 +5,12 @@ import org.openqa.selenium.WebDriver;
 
 public class Register {
     WebDriver driver;
-    Constructor constructor;
+    Constructor constructor = new Constructor(driver);
     private final String PAGE_REGISTER = constructor.getMAIN_PAGE_URL() + "/register";
     private By nameInput = By.xpath(".//*[contains(label,'Имя')]");
     private By emailInput = By.xpath(".//*[contains(label,'Email')]");
     private By passwordInput = By.xpath(".//*[contains(label,'Пароль')]");
-    private By signUpButton = By.xpath(".//*[text() = \"Зарегистрироваться\"]");
+    private By signUpButton = By.xpath(".//*[text() = 'Зарегистрироваться']");
 
     public void fillNewUserData(String name, String email, String password) {
         driver.findElement(nameInput).sendKeys(name);

@@ -38,13 +38,13 @@ public class ConstructorTest {
     public void setUp() {
         driver = browser.getWebDriver(browserType);
         constructor = new Constructor(driver);
-        driver.get(constructor.getMAIN_PAGE_URL());
-        constructor.waitLoaderIsHidden();
     }
 
     @Test
     @DisplayName("Тест на переход к разделу с ингредиентами на странице Конструктора")
     public void constructorTest() {
+        driver.get(constructor.getMAIN_PAGE_URL());
+        constructor.waitLoaderIsHidden();
         constructor.clickTab(burgerElement);
         constructor.ingredientsListIsAvailable(burgerElement);
     }
