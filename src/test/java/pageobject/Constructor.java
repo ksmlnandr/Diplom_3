@@ -11,11 +11,10 @@ import java.time.Duration;
 import static org.junit.Assert.*;
 
 
-public class Constructor {
+public class Constructor extends Loader {
     private WebDriver driver;
     private String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
     private By profileButton = By.xpath(".//*[contains(@href,'account')]");
-    private By loader = By.className("Modal_modal_overlay__x2ZCr");
     private String tab = "span";
     private String listHeader = "h2";
 
@@ -41,8 +40,9 @@ public class Constructor {
     }
 
     @Step("Ожидание скрытия анимации лоадера")
+    @Override
     public void waitLoaderIsHidden() {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.invisibilityOfElementLocated(loader));
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
     }
 
     @Step("Успешный клик по разделу Конструктора")
