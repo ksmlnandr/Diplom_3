@@ -1,8 +1,6 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,17 +8,17 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import pageobject.Browser;
 import pageobject.Login;
+import resources.CreateUserApi;
 import resources.RestClient;
 import resources.UserData;
-
-import static io.restassured.RestAssured.given;
 
 @RunWith(Parameterized.class)
 public class LoginTest {
     WebDriver driver;
-    Login login;
+    Login login = new Login(driver);
     private Browser browser = new Browser();
-    private final RestClient restClient = new RestClient();
+    private RestClient restClient = new RestClient();
+    private CreateUserApi createUserApi = new CreateUserApi();
     private UserData userData = new UserData("ivanoff@test.ru", "1234", "Андрей");
     private final String browserType;
 
@@ -40,14 +38,7 @@ public class LoginTest {
     @Before
     public void setUp() {
         RestAssured.baseURI = restClient.getBaseUrl();
-        Response response =
-                given()
-                        .header("Content-type", "application/json")
-                        .and()
-                        .body(userData)
-                        .when()
-                        .post(restClient.getUserRegister());
-        Assert.assertEquals(true, response.then().statusCode(201));
+        createUserApi.createUser(userData);
 
         driver = browser.getWebDriver(browserType);
         login = new Login(driver);
