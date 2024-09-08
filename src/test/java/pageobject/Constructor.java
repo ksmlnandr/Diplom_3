@@ -27,8 +27,7 @@ public class Constructor extends Loader {
     }
 
     private By elemConstructor(String pathElement, String burgerElement, boolean isList) {
-        String xPath = String.format(".//%s[text() ", pathElement);
-        xPath = xPath + String.format("= '%s']",burgerElement);
+        String xPath = ".//" + pathElement + "[text() = '" + burgerElement + "']";
         By path = By.xpath(xPath);
 
             if (pathElement.equals("h2") && isList) {
