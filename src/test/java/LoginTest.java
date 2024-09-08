@@ -86,7 +86,7 @@ public class LoginTest {
     @Test
     @DisplayName("Тест входа через кнопку в форме восстановления пароля")
     public void authFromLoginButtonOnForgot() {
-        driver.get(login.getPAGE_REGISTER());
+        driver.get(login.getPAGE_FORGOT_PASSWORD());
         login.waitLoaderIsHidden();
 
         driver.findElement(login.getLoginButtonOnForgot()).isDisplayed();

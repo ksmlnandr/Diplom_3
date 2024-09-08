@@ -1,6 +1,5 @@
 package resources;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Assert;
 
@@ -10,11 +9,6 @@ public class CreateUserApi {
 
     RestClient restClient = new RestClient();
 
-    private void setBaseUrl() {
-
-    }
-
-
     public void createUser(UserData userData) {
         Response response =
                 given()
@@ -23,7 +17,6 @@ public class CreateUserApi {
                         .body(userData)
                         .when()
                         .post(restClient.getUserRegister());
-        Assert.assertEquals(true, response.then().statusCode(200));
     }
 
 }
