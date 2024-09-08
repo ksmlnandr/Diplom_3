@@ -54,7 +54,7 @@ public class LoginTest {
         driver.findElement(login.getLoginButtonOnMain()).click();
 
         login.fillUserData(userData.getEmail(), userData.getPassword());
-        login.clickSignUpButton();
+        login.clickLoginButton();
     }
 
     @Test
@@ -67,7 +67,7 @@ public class LoginTest {
         driver.findElement(login.getProfileButtonOnMain()).click();
 
         login.fillUserData(userData.getEmail(), userData.getPassword());
-        login.clickSignUpButton();
+        login.clickLoginButton();
     }
 
     @Test
@@ -80,7 +80,7 @@ public class LoginTest {
         driver.findElement(login.getLoginButtonOnForgot()).click();
 
         login.fillUserData(userData.getEmail(), userData.getPassword());
-        login.clickSignUpButton();
+        login.clickLoginButton();
     }
 
     @Test
@@ -93,7 +93,7 @@ public class LoginTest {
         driver.findElement(login.getLoginButtonOnForgot()).click();
 
         login.fillUserData(userData.getEmail(), userData.getPassword());
-        login.clickSignUpButton();
+        login.clickLoginButton();
     }
 
     @After

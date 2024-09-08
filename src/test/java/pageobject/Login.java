@@ -69,7 +69,7 @@ public class Login extends Loader{
     }
 
     @Step("Проверка возможности клика по кнопке 'Войти'")
-    public void clickSignUpButton() {
+    public void clickLoginButton() {
         Assert.assertTrue(driver.findElement(loginButtonOnLogin).isEnabled());
         driver.findElement(loginButtonOnLogin).click();
     }
