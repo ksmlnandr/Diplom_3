@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
 public class Constructor extends Loader {
     private WebDriver driver;
     private String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
-    private By profileButton = By.xpath(".//*[contains(@href,'account')]");
     private String tab = "span";
     private String listHeader = "h2";
 
