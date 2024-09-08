@@ -3,29 +3,29 @@ import io.restassured.RestAssured;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import pageobject.Browser;
 import pageobject.Login;
-import pageobject.MainToProfile;
+import pageobject.Logout;
+import pageobject.ProfileToMain;
 import resources.CreateUserApi;
 import resources.RestClient;
 import resources.UserData;
 
-@RunWith(Parameterized.class)
-public class FromMainToProfileTest {
+public class FromProfileToMainTest {
     private WebDriver driver;
     private Browser browser = new Browser();
     private RestClient restClient = new RestClient();
     private CreateUserApi createUserApi = new CreateUserApi();
-    private UserData userData = new UserData("abcde@test.com", "12345", "Test");
+    private UserData userData = new UserData("abcdef@test.com", "12345", "Test");
     private Login login = new Login(driver);
-    private MainToProfile mtp = new MainToProfile(driver);
+    private Logout logout = new Logout(driver);
+    private ProfileToMain ptm = new ProfileToMain(driver);
 
     private final String browserType;
 
-    public FromMainToProfileTest(String browserType) {
+    public FromProfileToMainTest(String browserType) {
         this.browserType = browserType;
     }
 
@@ -52,17 +52,30 @@ public class FromMainToProfileTest {
     }
 
     @Test
-    @DisplayName("Тест перехода по клику на «Личный кабинет»")
-    public void fromMainToProfileTest() {
-        driver.get(login.getMAIN_PAGE_URL());
-        mtp.waitLoaderIsHidden();
-        mtp.clickProfileButton();
-        mtp.waitLoaderIsHidden();
-        mtp.isProfilePageDisplayed();
+    @DisplayName("Тест перехода на главную по кнопке 'Конструктор'")
+    public void constructorButtonToMainTest() {
+        driver.get(logout.getPAGE_PROFILE());
+        ptm.waitLoaderIsHidden();
+        ptm.clickConstructorButton();
+        ptm.waitLoaderIsHidden();
+        ptm.isMainPageDisplayed();
+    }
+
+    @Test
+    @DisplayName("Тест перехода на главную по кнопке логотипа")
+    public void logoButtonToMainTest() {
+        driver.get(logout.getPAGE_PROFILE());
+        ptm.waitLoaderIsHidden();
+        ptm.clickLogoButton();
+        ptm.waitLoaderIsHidden();
+        ptm.isMainPageDisplayed();
     }
 
     @After
     public void tearDown() {
         driver.quit();
+
+        //дописать метод удаления пользователя
     }
+
 }

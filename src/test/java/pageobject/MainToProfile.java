@@ -3,12 +3,16 @@ package pageobject;
 import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MainToProfile {
+import java.time.Duration;
 
-    WebDriver driver;
-    Login login = new Login(driver);
-    Logout logout = new Logout(driver);
+public class MainToProfile extends Loader {
+
+    private WebDriver driver;
+    private Login login = new Login(driver);
+    private Logout logout = new Logout(driver);
 
     public MainToProfile(WebDriver driver) {
         this.driver = driver;
@@ -25,5 +29,11 @@ public class MainToProfile {
         String expected = logout.getPAGE_PROFILE();
         String actual = driver.getCurrentUrl();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Step("Ожидание скрытия анимации лоадера")
+    @Override
+    public void waitLoaderIsHidden() {
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
     }
 }
