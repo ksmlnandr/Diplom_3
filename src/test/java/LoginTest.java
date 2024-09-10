@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import pageobject.Browser;
 import pageobject.Login;
 import resources.CreateUserApi;
+import resources.DeleteUserApi;
 import resources.RestClient;
 import resources.UserData;
 
@@ -19,7 +20,9 @@ public class LoginTest {
     private Browser browser = new Browser();
     private RestClient restClient = new RestClient();
     private CreateUserApi createUserApi = new CreateUserApi();
+    private DeleteUserApi dua = new DeleteUserApi();
     private UserData userData = new UserData("ivanoff@test.ru", "1234", "Андрей");
+    private String accessToken;
     private final String browserType;
 
 
@@ -39,6 +42,7 @@ public class LoginTest {
     public void setUp() {
         RestAssured.baseURI = restClient.getBaseUrl();
         createUserApi.createUser(userData);
+        accessToken = createUserApi.getAccessToken();
 
         driver = browser.getWebDriver(browserType);
         login = new Login(driver);
@@ -100,7 +104,7 @@ public class LoginTest {
     public void tearDown() {
         driver.quit();
 
-        //дописать метод удаления пользователя после теста
+        dua.cleanUp(accessToken);
     }
 
 }

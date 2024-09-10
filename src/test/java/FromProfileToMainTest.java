@@ -10,6 +10,7 @@ import pageobject.Login;
 import pageobject.Logout;
 import pageobject.ProfileToMain;
 import resources.CreateUserApi;
+import resources.DeleteUserApi;
 import resources.RestClient;
 import resources.UserData;
 
@@ -18,6 +19,8 @@ public class FromProfileToMainTest {
     private Browser browser = new Browser();
     private RestClient restClient = new RestClient();
     private CreateUserApi createUserApi = new CreateUserApi();
+    private DeleteUserApi dua = new DeleteUserApi();
+    private String accessToken;
     private UserData userData = new UserData("abcdef@test.com", "12345", "Test");
     private Login login = new Login(driver);
     private Logout logout = new Logout(driver);
@@ -41,6 +44,7 @@ public class FromProfileToMainTest {
     public void setUp() {
         RestAssured.baseURI = restClient.getBaseUrl();
         createUserApi.createUser(userData);
+        accessToken = createUserApi.getAccessToken();
 
         driver = browser.getWebDriver(browserType);
         login = new Login(driver);
@@ -74,8 +78,6 @@ public class FromProfileToMainTest {
     @After
     public void tearDown() {
         driver.quit();
-
-        //дописать метод удаления пользователя
+        dua.cleanUp(accessToken);
     }
-
 }

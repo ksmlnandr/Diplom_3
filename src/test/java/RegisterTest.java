@@ -3,13 +3,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import pageobject.Browser;
 import pageobject.Register;
+import resources.DeleteUserApi;
 
 @RunWith(Parameterized.class)
 public class RegisterTest {
     private Browser browser = new Browser();
+    private DeleteUserApi dua = new DeleteUserApi();
+    private String accessToken;
     private Register register;
     private WebDriver driver;
     private final String browserType;
@@ -46,11 +50,15 @@ public class RegisterTest {
         register.waitLoaderIsHidden();
         register.fillNewUserData(name, email, password);
         register.clickSignUpButton(password);
+
+        Cookie cookie = driver.manage().getCookieNamed("accessToken");
+        accessToken = cookie.toString();
     }
 
     @After
     public void tearDown(){
         driver.quit();
+        dua.cleanUp(accessToken);
     }
 
 }
