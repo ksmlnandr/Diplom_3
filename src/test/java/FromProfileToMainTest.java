@@ -3,6 +3,7 @@ import io.restassured.RestAssured;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import pageobject.Browser;
@@ -14,6 +15,7 @@ import resources.DeleteUserApi;
 import resources.RestClient;
 import resources.UserData;
 
+@RunWith(Parameterized.class)
 public class FromProfileToMainTest {
     private WebDriver driver;
     private Browser browser = new Browser();
@@ -27,7 +29,6 @@ public class FromProfileToMainTest {
     private ProfileToMain ptm = new ProfileToMain(driver);
 
     private final String browserType;
-
     public FromProfileToMainTest(String browserType) {
         this.browserType = browserType;
     }
