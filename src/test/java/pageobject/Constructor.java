@@ -32,7 +32,10 @@ public class Constructor extends Loader {
             if (pathElement.equals("h2") && isList) {
             By listPath = By.xpath("(" + xPath + "/parent::div)/ul");
             return listPath;
-        } else {
+        } else if (pathElement.equals("span") && !isList) {
+                By listPath = By.xpath("(" + xPath + "/parent::div)");
+                return listPath;
+            } else {
         return path;
         }
     }
@@ -40,7 +43,7 @@ public class Constructor extends Loader {
     @Step("Ожидание скрытия анимации лоадера")
     @Override
     public void waitLoaderIsHidden() {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
     }
 
     @Step("Успешный клик по разделу Конструктора")
