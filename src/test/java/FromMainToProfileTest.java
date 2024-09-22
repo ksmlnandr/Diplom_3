@@ -1,56 +1,38 @@
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
+import model.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageobject.Browser;
 import pageobject.Login;
 import pageobject.MainToProfile;
-import resources.CreateUserApi;
-import resources.DeleteUserApi;
-import resources.RestClient;
-import resources.UserData;
+import model.CreateUserApi;
+import model.UserData;
 
-@RunWith(Parameterized.class)
+import static model.CommonMethods.setApiBaseUrl;
+import static pageobject.Login.PAGE_LOGIN;
+import static pageobject.Constructor.MAIN_PAGE_URL;
+
 public class FromMainToProfileTest {
     private WebDriver driver;
-    private Browser browser = new Browser();
-    private RestClient restClient = new RestClient();
+    private Login login;
+    private MainToProfile mtp;
+    private CommonMethods commonMethods = new CommonMethods();
     private CreateUserApi createUserApi = new CreateUserApi();
-    private DeleteUserApi dua = new DeleteUserApi();
-    private String accessToken;
-    private UserData userData = new UserData("abcde@test.com", "12345", "Test");
-    private Login login = new Login(driver);
-    private MainToProfile mtp = new MainToProfile(driver);
+    private UserData userData = new UserData(commonMethods.setRandomUserEmail(), "1234567", "Test");
 
-    private final String browserType;
-
-    public FromMainToProfileTest(String browserType) {
-        this.browserType = browserType;
-    }
-
-    @Parameterized.Parameters
-    public static Object[][] setParameters() {
-        return new Object[][] {
-                {"chrome"},
-                {"firefox"}
-        };
-    }
 
     @Before
     public void setUp() {
-        RestAssured.baseURI = restClient.getBaseUrl();
+        setApiBaseUrl();
         createUserApi.createUser(userData);
-        accessToken = createUserApi.getAccessToken();
 
-        driver = browser.getWebDriver(browserType);
+        driver = commonMethods.setDriver();
         login = new Login(driver);
+        mtp = new MainToProfile(driver);
 
-        driver.get(login.getPAGE_LOGIN());
-        login.waitLoaderIsHidden();
+        driver.get(PAGE_LOGIN);
+        login.waitLoaderIsHidden(driver);
         login.fillUserData(userData.getEmail(), userData.getPassword());
         login.clickLoginButton();
     }
@@ -58,16 +40,16 @@ public class FromMainToProfileTest {
     @Test
     @DisplayName("Тест перехода по клику на «Личный кабинет»")
     public void fromMainToProfileTest() {
-        driver.get(login.getMAIN_PAGE_URL());
-        mtp.waitLoaderIsHidden();
+        driver.get(MAIN_PAGE_URL);
+        mtp.waitLoaderIsHidden(driver);
         mtp.clickProfileButton();
-        mtp.waitLoaderIsHidden();
+        mtp.waitLoaderIsHidden(driver);
         mtp.isProfilePageDisplayed();
     }
 
     @After
     public void tearDown() {
         driver.quit();
-        dua.cleanUp(accessToken);
+        commonMethods.deleteUser(userData.getEmail(), userData.getPassword());
     }
 }

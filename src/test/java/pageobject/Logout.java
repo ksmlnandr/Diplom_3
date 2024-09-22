@@ -4,24 +4,22 @@ import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static pageobject.Constructor.MAIN_PAGE_URL;
+import static pageobject.Login.PAGE_LOGIN;
+
 public class Logout extends Loader {
     WebDriver driver;
-    Constructor constructor = new Constructor(driver);
-
-    private final String PAGE_PROFILE = constructor.getMAIN_PAGE_URL() + "/account/profile";
+    public static final String PAGE_PROFILE = MAIN_PAGE_URL + "account/profile";
     private By logoutButton = By.xpath(".//button[text() = 'Выход']");
 
     public Logout(WebDriver driver) {
         this.driver = driver;
-    }
-
-    public String getPAGE_PROFILE() {
-        return PAGE_PROFILE;
     }
 
     @Step("Проверка клика по кнопке 'Выход'")
@@ -30,9 +28,15 @@ public class Logout extends Loader {
         driver.findElement(logoutButton).click();
     }
 
-    @Step("Ожидание скрытия анимации лоадера")
-    @Override
-    public void waitLoaderIsHidden() {
-        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
+    public void waitHideLogoutButton() {
+        Assert.assertTrue(new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.invisibilityOf(driver.findElement(logoutButton))));
     }
+
+    @Step("Проверка автоматического перехода на страницу авторизации")
+    public void checkAuthPageAfterLogout() {
+        String actual = driver.getCurrentUrl();
+        Assert.assertEquals(PAGE_LOGIN, actual);
+    }
+
 }

@@ -3,17 +3,13 @@ package pageobject;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 import static org.junit.Assert.*;
 
 
 public class Constructor extends Loader {
     private WebDriver driver;
-    private String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
+    public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/";
     private String tab = "span";
     private String listHeader = "h2";
 
@@ -21,16 +17,12 @@ public class Constructor extends Loader {
         this.driver = driver;
     }
 
-    public String getMAIN_PAGE_URL() {
-        return MAIN_PAGE_URL;
-    }
-
     private By elemConstructor(String pathElement, String burgerElement, boolean isList) {
         String xPath = ".//" + pathElement + "[text() = '" + burgerElement + "']";
         By path = By.xpath(xPath);
 
             if (pathElement.equals("h2") && isList) {
-            By listPath = By.xpath("(" + xPath + "/parent::div)/ul");
+            By listPath = By.xpath("(" + xPath + "/parent::div)");
             return listPath;
         } else if (pathElement.equals("span") && !isList) {
                 By listPath = By.xpath("(" + xPath + "/parent::div)");
@@ -38,12 +30,6 @@ public class Constructor extends Loader {
             } else {
         return path;
         }
-    }
-
-    @Step("Ожидание скрытия анимации лоадера")
-    @Override
-    public void waitLoaderIsHidden() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(getLoader()));
     }
 
     @Step("Успешный клик по разделу Конструктора")

@@ -1,0 +1,257 @@
+{
+  "c1ae2450dcce89dfba02e6ca4e04044b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7f249627648d6b7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727026700627,
+        "stop" : 1727026722476,
+        "duration" : 21849
+      }
+    } ]
+  },
+  "b2b9a045ae5c588c83247011e9540718" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f3c46d9aedec645",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727026746467,
+        "stop" : 1727026761988,
+        "duration" : 15521
+      }
+    } ]
+  },
+  "3982163cbfbe343570804631151d177c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7d852e0b127f5686",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727026590059,
+        "stop" : 1727026602020,
+        "duration" : 11961
+      }
+    } ]
+  },
+  "2ec6048b9f5ab349a4c3dbdc2af3e6f2" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d5be83ad91fbce0a",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727026761996,
+        "stop" : 1727026775275,
+        "duration" : 13279
+      }
+    } ]
+  },
+  "ce8f254ca75140594a3f49d8797e310b" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "171c93ba852516aa",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727026479183,
+        "stop" : 1727026577884,
+        "duration" : 98701
+      }
+    } ]
+  },
+  "b22a70f073c643f97aa89f6407d8e23d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bb604a57c5bac73",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727026444380,
+        "stop" : 1727026461952,
+        "duration" : 17572
+      }
+    } ]
+  },
+  "15808fdf924c14e6c37058f262ec6db8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a242e3c3dd3f0e12",
+      "status" : "broken",
+      "statusDetails" : "element click intercepted: Element <div class=\"tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect\">...</div> is not clickable at point (100, 215). Other element would receive the click: <div style=\"display: flex;\">...</div>\n  (Session info: chrome=128.0.6613.138)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [06bfbc078014e605b78e4f30c73103e5, clickElement {id=f.4402375595EA33AC27C7E57DFABF9357.d.95742199C89203B4D2E55FC37FDA7D3D.e.67}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65084/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (06bfbc078014e605b78e4f30c73103e5)] -> xpath: (.//span[text() = 'Булки']/parent::div)]\nSession ID: 06bfbc078014e605b78e4f30c73103e5",
+      "time" : {
+        "start" : 1727026578017,
+        "stop" : 1727026590053,
+        "duration" : 12036
+      }
+    } ]
+  },
+  "675968eadbccbe0fc4a2370cd75dcfa3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "caf573208c2bd89a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727026602026,
+        "stop" : 1727026614077,
+        "duration" : 12051
+      }
+    } ]
+  },
+  "d45679bca97571dce5118a76c832b9b9" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "51af11aa26af693b",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727026427824,
+        "stop" : 1727026444358,
+        "duration" : 16534
+      }
+    } ]
+  },
+  "b83639c57a2a39adf9885246b28622e9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "162a3a7c36c0fa42",
+      "status" : "broken",
+      "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//button[text() = 'Выход']\"}\n  (Session info: chrome=128.0.6613.138)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [7436683098f7728e8001021e05c1a6bf, findElement {value=.//button[text() = 'Выход'], using=xpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65288}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65288/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 7436683098f7728e8001021e05c1a6bf",
+      "time" : {
+        "start" : 1727026614095,
+        "stop" : 1727026700587,
+        "duration" : 86492
+      }
+    } ]
+  },
+  "881ab515fd3f1010ac8f6a5857475ef3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e83a30fa6a146d76",
+      "status" : "broken",
+      "statusDetails" : "element click intercepted: Element <p class=\"AppHeader_header__linkText__3q_va ml-2\">...</p> is not clickable at point (1112, 44). Other element would receive the click: <div class=\"Modal_modal_overlay__x2ZCr\"></div>\n  (Session info: chrome=128.0.6613.138)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [49168599c904c2b25957766e1e345256, clickElement {id=f.EB3FBE932F3E0D73DB4ED0A634482809.d.198124597980EC65359B67EFCD6B6779.e.40}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63861/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (49168599c904c2b25957766e1e345256)] -> xpath: .//p[text() = 'Личный Кабинет']]\nSession ID: 49168599c904c2b25957766e1e345256",
+      "time" : {
+        "start" : 1727026289300,
+        "stop" : 1727026427708,
+        "duration" : 138408
+      }
+    } ]
+  },
+  "12d89935193d59506dd22fd7a83608ff" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "213c9db0237da444",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727026461960,
+        "stop" : 1727026479171,
+        "duration" : 17211
+      }
+    } ]
+  },
+  "96589828d4b2c0e3f2b62f0572bb7f70" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "130e51277882e46",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727026722490,
+        "stop" : 1727026746420,
+        "duration" : 23930
+      }
+    } ]
+  }
+}

@@ -1,23 +1,23 @@
 import io.qameta.allure.junit4.DisplayName;
+import model.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageobject.Browser;
 import pageobject.Constructor;
+
+import static pageobject.Constructor.MAIN_PAGE_URL;
 
 @RunWith(Parameterized.class)
 public class ConstructorTest {
-    private Browser browser = new Browser();
+    CommonMethods commonMethods = new CommonMethods();
     private Constructor constructor;
     private WebDriver driver;
-    private final String browserType;
     private final String burgerElement;
 
-    public ConstructorTest(String browserType, String burgerElement) {
-        this.browserType = browserType;
+    public ConstructorTest(String burgerElement) {
         this.burgerElement = burgerElement;
     }
 
@@ -25,26 +25,23 @@ public class ConstructorTest {
     @Parameterized.Parameters
     public static Object[][] setParameters() {
         return new Object[][] {
-                {"chrome", "Булки"},
-                {"chrome", "Соусы"},
-                {"chrome", "Начинки"},
-                {"firefox","Булки"},
-                {"firefox", "Соусы"},
-                {"firefox", "Начинки"}
+                {"Булки"},
+                {"Соусы"},
+                {"Начинки"}
         };
     }
 
     @Before
     public void setUp() {
-        driver = browser.getWebDriver(browserType);
+        driver = commonMethods.setDriver();
         constructor = new Constructor(driver);
     }
 
     @Test
     @DisplayName("Тест на переход к разделу с ингредиентами на странице Конструктора")
     public void constructorTest() {
-        driver.get(constructor.getMAIN_PAGE_URL());
-        constructor.waitLoaderIsHidden();
+        driver.get(MAIN_PAGE_URL);
+        constructor.waitLoaderIsHidden(driver);
         constructor.clickTab(burgerElement);
         constructor.ingredientsListIsAvailable(burgerElement);
     }

@@ -1,69 +1,56 @@
-import io.restassured.RestAssured;
+import io.qameta.allure.junit4.DisplayName;
+import model.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageobject.Browser;
 import pageobject.Login;
 import pageobject.Logout;
-import resources.CreateUserApi;
-import resources.DeleteUserApi;
-import resources.RestClient;
-import resources.UserData;
+import model.CreateUserApi;
+import model.UserData;
+import pageobject.MainToProfile;
 
-@RunWith(Parameterized.class)
+import static model.CommonMethods.setApiBaseUrl;
+import static pageobject.Login.PAGE_LOGIN;
+
 public class LogoutTest {
-
     private WebDriver driver;
-    private Browser browser = new Browser();
-    private RestClient restClient = new RestClient();
+    private CommonMethods commonMethods = new CommonMethods();
     private CreateUserApi createUserApi = new CreateUserApi();
-    private DeleteUserApi dua = new DeleteUserApi();
-    private String accessToken;
-    private UserData userData = new UserData("abcd@test.com", "12345", "Test");
-    private Login login = new Login(driver);
-    private Logout logout = new Logout(driver);
-
-    private final String browserType;
-
-    public LogoutTest(String browserType) {
-        this.browserType = browserType;
-    }
-
-    @Parameterized.Parameters
-    public static Object[][] setParameters() {
-        return new Object[][] {
-                {"chrome"},
-                {"firefox"}
-        };
-    }
+    private UserData userData = new UserData(commonMethods.setRandomUserEmail(), "1234567", "Test");
+    private Login login;
+    private Logout logout;
+    private MainToProfile mtp;
 
     @Before
     public void setUp() {
-        RestAssured.baseURI = restClient.getBaseUrl();
+        setApiBaseUrl();
         createUserApi.createUser(userData);
-        accessToken = createUserApi.getAccessToken();
 
-        driver = browser.getWebDriver(browserType);
+        driver = commonMethods.setDriver();
         login = new Login(driver);
+        logout = new Logout(driver);
+        mtp = new MainToProfile(driver);
 
-        driver.get(login.getPAGE_LOGIN());
-        logout.waitLoaderIsHidden();
+        driver.get(PAGE_LOGIN);
+        logout.waitLoaderIsHidden(driver);
         login.fillUserData(userData.getEmail(), userData.getPassword());
+        login.clickLoginButton();
     }
 
     @Test
+    @DisplayName("Тест логаута пользователя по кнопке из личного кабинета")
     public void logoutButtonTest() {
-        driver.get(logout.getPAGE_PROFILE());
+        mtp.clickProfileButton();
+        logout.waitLoaderIsHidden(driver);
         logout.clickLogoutButton();
+        logout.waitHideLogoutButton();
+        logout.checkAuthPageAfterLogout();
     }
 
     @After
     public void tearDown() {
         driver.quit();
-
-        dua.cleanUp(accessToken);
+        commonMethods.deleteUser(userData.getEmail(), userData.getPassword());
     }
 }

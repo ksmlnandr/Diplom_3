@@ -1,13 +1,17 @@
 package pageobject;
 
 import org.openqa.selenium.By;
-public class Loader {
-    private final By loader = By.className("Modal_modal_overlay__x2ZCr");
-    public By getLoader() {
-        return loader;
-    }
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-    public void waitLoaderIsHidden() {
+import java.time.Duration;
+
+public class Loader {
+    private final By loader = By.xpath(".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]");
+
+    public void waitLoaderIsHidden(WebDriver driver) {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.invisibilityOfElementLocated(loader));
 
     }
 }
