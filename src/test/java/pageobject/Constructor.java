@@ -17,15 +17,18 @@ public class Constructor extends Loader {
         this.driver = driver;
     }
 
-    private By elemConstructor(String pathElement, String burgerElement, boolean isList) {
+    private By elemConstructor(String pathElement, String burgerElement, boolean isCurrent, boolean isList) {
         String xPath = ".//" + pathElement + "[text() = '" + burgerElement + "']";
         By path = By.xpath(xPath);
 
             if (pathElement.equals("h2") && isList) {
-            By listPath = By.xpath("(" + xPath + "/parent::div)");
+            By listPath = By.xpath("(" + xPath + "/parent::div)/ul");
             return listPath;
-        } else if (pathElement.equals("span") && !isList) {
+        } else if (pathElement.equals("span") && !isList && !isCurrent) {
                 By listPath = By.xpath("(" + xPath + "/parent::div)");
+                return listPath;
+            } else if ((pathElement.equals("span") && !isList) && isCurrent) {
+                By listPath = By.xpath("(" + xPath + "/parent::div[contains(@class,'tab_tab_type_current__2BEPc')])");
                 return listPath;
             } else {
         return path;
@@ -34,13 +37,14 @@ public class Constructor extends Loader {
 
     @Step("Успешный клик по разделу Конструктора")
     public void clickTab(String burgerElement) {
-        driver.findElement(elemConstructor(tab, burgerElement, false)).isDisplayed();
-        driver.findElement(elemConstructor(tab, burgerElement, false)).click();
+        driver.findElement(elemConstructor(tab, burgerElement, false, false)).isDisplayed();
+        driver.findElement(elemConstructor(tab, burgerElement, false, false)).click();
+        assertTrue(driver.findElement(elemConstructor(tab, burgerElement, true,false)).isDisplayed());
     }
 
     @Step("Проверка на отображение заголовка раздела и списка доступных ингредиентов")
     public void ingredientsListIsAvailable(String burgerElement) {
-        assertTrue(driver.findElement(elemConstructor(listHeader, burgerElement, false)).isDisplayed());
-        assertTrue(driver.findElement(elemConstructor(listHeader, burgerElement, true)).isDisplayed());
+        assertTrue(driver.findElement(elemConstructor(listHeader, burgerElement, false,false)).isDisplayed());
+        assertTrue(driver.findElement(elemConstructor(listHeader, burgerElement, false,true)).isDisplayed());
     }
 }
