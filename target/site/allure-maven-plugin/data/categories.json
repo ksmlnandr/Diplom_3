@@ -1,0 +1,99 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "java.lang.AssertionError",
+      "children" : [ {
+        "name" : "Тест входа через кнопку в форме восстановления пароля",
+        "uid" : "182bd1926b364bcf",
+        "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727208439306,
+          "stop" : 1727208454441,
+          "duration" : 15135
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тест входа через кнопку «Личный кабинет»",
+        "uid" : "720f277b4939b630",
+        "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727208454453,
+          "stop" : 1727208470496,
+          "duration" : 16043
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тест входа по кнопке «Войти в аккаунт» на главной",
+        "uid" : "4e19797356b4e789",
+        "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727208470507,
+          "stop" : 1727208486317,
+          "duration" : 15810
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тест входа через кнопку в форме регистрации",
+        "uid" : "1abb3ced365f6992",
+        "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727208486327,
+          "stop" : 1727208530091,
+          "duration" : 43764
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Тест на регистрацию нового пользователя",
+        "uid" : "bf57ceceb35b3d0a",
+        "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
+        "status" : "failed",
+        "time" : {
+          "start" : 1727208645815,
+          "stop" : 1727208658097,
+          "duration" : 12282
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8c5a12edd58a5b39ca043c7c2ab86098"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element click intercepted: Element <div class=\"tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect\">...</div> is not clickable at point (100, 215). Other element would receive the click: <div style=\"display: flex;\">...</div>\n  (Session info: chrome=129.0.6668.59)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [ff39b0f8c758e4d00c0d48a80f7bc719, clickElement {id=f.F7C5240266335C0599DD9953DC94B6EF.d.6A1161F5EA97A0877DDD815C431A5852.e.65}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62240}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62240/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (ff39b0f8c758e4d00c0d48a80f7bc719)] -> xpath: (.//span[text() = 'Булки']/parent::div)]\nSession ID: ff39b0f8c758e4d00c0d48a80f7bc719",
+      "children" : [ {
+        "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
+        "uid" : "6c3298e76123c6ac",
+        "parentUid" : "c8556e02637c2ed51a24e796c5db2035",
+        "status" : "broken",
+        "time" : {
+          "start" : 1727208530166,
+          "stop" : 1727208541843,
+          "duration" : 11677
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c8556e02637c2ed51a24e796c5db2035"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

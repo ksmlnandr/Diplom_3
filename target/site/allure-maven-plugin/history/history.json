@@ -1,0 +1,255 @@
+{
+  "c1ae2450dcce89dfba02e6ca4e04044b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8ae36865533394b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208586651,
+        "stop" : 1727208608996,
+        "duration" : 22345
+      }
+    } ]
+  },
+  "b2b9a045ae5c588c83247011e9540718" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fc3b8134d70580a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208631620,
+        "stop" : 1727208645799,
+        "duration" : 14179
+      }
+    } ]
+  },
+  "3982163cbfbe343570804631151d177c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ae602a2a2b18cb04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208541849,
+        "stop" : 1727208553168,
+        "duration" : 11319
+      }
+    } ]
+  },
+  "ce8f254ca75140594a3f49d8797e310b" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1abb3ced365f6992",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727208486327,
+        "stop" : 1727208530091,
+        "duration" : 43764
+      }
+    } ]
+  },
+  "15808fdf924c14e6c37058f262ec6db8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6c3298e76123c6ac",
+      "status" : "broken",
+      "statusDetails" : "element click intercepted: Element <div class=\"tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect\">...</div> is not clickable at point (100, 215). Other element would receive the click: <div style=\"display: flex;\">...</div>\n  (Session info: chrome=129.0.6668.59)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [ff39b0f8c758e4d00c0d48a80f7bc719, clickElement {id=f.F7C5240266335C0599DD9953DC94B6EF.d.6A1161F5EA97A0877DDD815C431A5852.e.65}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62240}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62240/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (ff39b0f8c758e4d00c0d48a80f7bc719)] -> xpath: (.//span[text() = 'Булки']/parent::div)]\nSession ID: ff39b0f8c758e4d00c0d48a80f7bc719",
+      "time" : {
+        "start" : 1727208530166,
+        "stop" : 1727208541843,
+        "duration" : 11677
+      }
+    } ]
+  },
+  "b22a70f073c643f97aa89f6407d8e23d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "720f277b4939b630",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727208454453,
+        "stop" : 1727208470496,
+        "duration" : 16043
+      }
+    } ]
+  },
+  "2ec6048b9f5ab349a4c3dbdc2af3e6f2" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bf57ceceb35b3d0a",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727208645815,
+        "stop" : 1727208658097,
+        "duration" : 12282
+      }
+    } ]
+  },
+  "675968eadbccbe0fc4a2370cd75dcfa3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8844ae572315272",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208553182,
+        "stop" : 1727208564230,
+        "duration" : 11048
+      }
+    } ]
+  },
+  "d45679bca97571dce5118a76c832b9b9" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "182bd1926b364bcf",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727208439306,
+        "stop" : 1727208454441,
+        "duration" : 15135
+      }
+    } ]
+  },
+  "b83639c57a2a39adf9885246b28622e9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b4c04eaa810f90ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208564275,
+        "stop" : 1727208586620,
+        "duration" : 22345
+      }
+    } ]
+  },
+  "881ab515fd3f1010ac8f6a5857475ef3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "580cfd0f5c56a5e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208409460,
+        "stop" : 1727208439172,
+        "duration" : 29712
+      }
+    } ]
+  },
+  "12d89935193d59506dd22fd7a83608ff" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4e19797356b4e789",
+      "status" : "failed",
+      "statusDetails" : "java.lang.AssertionError",
+      "time" : {
+        "start" : 1727208470507,
+        "stop" : 1727208486317,
+        "duration" : 15810
+      }
+    } ]
+  },
+  "96589828d4b2c0e3f2b62f0572bb7f70" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9fbb9dcc4191f2e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1727208609008,
+        "stop" : 1727208631569,
+        "duration" : 22561
+      }
+    } ]
+  }
+}

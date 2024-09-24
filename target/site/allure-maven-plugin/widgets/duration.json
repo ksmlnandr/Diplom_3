@@ -1,0 +1,131 @@
+[ {
+  "uid" : "8844ae572315272",
+  "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
+  "time" : {
+    "start" : 1727208553182,
+    "stop" : 1727208564230,
+    "duration" : 11048
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf57ceceb35b3d0a",
+  "name" : "Тест на регистрацию нового пользователя",
+  "time" : {
+    "start" : 1727208645815,
+    "stop" : 1727208658097,
+    "duration" : 12282
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b4c04eaa810f90ce",
+  "name" : "Тест логаута пользователя по кнопке из личного кабинета",
+  "time" : {
+    "start" : 1727208564275,
+    "stop" : 1727208586620,
+    "duration" : 22345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ae602a2a2b18cb04",
+  "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
+  "time" : {
+    "start" : 1727208541849,
+    "stop" : 1727208553168,
+    "duration" : 11319
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "720f277b4939b630",
+  "name" : "Тест входа через кнопку «Личный кабинет»",
+  "time" : {
+    "start" : 1727208454453,
+    "stop" : 1727208470496,
+    "duration" : 16043
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "182bd1926b364bcf",
+  "name" : "Тест входа через кнопку в форме восстановления пароля",
+  "time" : {
+    "start" : 1727208439306,
+    "stop" : 1727208454441,
+    "duration" : 15135
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9fbb9dcc4191f2e5",
+  "name" : "Тест перехода на главную по кнопке логотипа",
+  "time" : {
+    "start" : 1727208609008,
+    "stop" : 1727208631569,
+    "duration" : 22561
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4e19797356b4e789",
+  "name" : "Тест входа по кнопке «Войти в аккаунт» на главной",
+  "time" : {
+    "start" : 1727208470507,
+    "stop" : 1727208486317,
+    "duration" : 15810
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "580cfd0f5c56a5e2",
+  "name" : "Тест перехода по клику на «Личный кабинет»",
+  "time" : {
+    "start" : 1727208409460,
+    "stop" : 1727208439172,
+    "duration" : 29712
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ae36865533394b4",
+  "name" : "Тест перехода на главную по кнопке 'Конструктор'",
+  "time" : {
+    "start" : 1727208586651,
+    "stop" : 1727208608996,
+    "duration" : 22345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fc3b8134d70580a0",
+  "name" : "Тест на регистрацию нового пользователя",
+  "time" : {
+    "start" : 1727208631620,
+    "stop" : 1727208645799,
+    "duration" : 14179
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1abb3ced365f6992",
+  "name" : "Тест входа через кнопку в форме регистрации",
+  "time" : {
+    "start" : 1727208486327,
+    "stop" : 1727208530091,
+    "duration" : 43764
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6c3298e76123c6ac",
+  "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
+  "time" : {
+    "start" : 1727208530166,
+    "stop" : 1727208541843,
+    "duration" : 11677
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
