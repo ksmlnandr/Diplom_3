@@ -1,17 +1,16 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "name" : "suites",
   "children" : [ {
     "name" : "FromMainToProfileTest",
     "children" : [ {
       "name" : "Тест перехода по клику на «Личный кабинет»",
-      "uid" : "e83a30fa6a146d76",
+      "uid" : "580cfd0f5c56a5e2",
       "parentUid" : "36bdff280433b64a7dff0233d4474623",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1727026289300,
-        "stop" : 1727026427708,
-        "duration" : 138408
+        "start" : 1727208409460,
+        "stop" : 1727208439172,
+        "duration" : 29712
       },
       "flaky" : false,
       "newFailed" : false,
@@ -22,52 +21,52 @@
     "name" : "LoginTest",
     "children" : [ {
       "name" : "Тест входа через кнопку в форме восстановления пароля",
-      "uid" : "51af11aa26af693b",
+      "uid" : "182bd1926b364bcf",
       "parentUid" : "b9a196f305ae86bf6bf452c18364a114",
       "status" : "failed",
       "time" : {
-        "start" : 1727026427824,
-        "stop" : 1727026444358,
-        "duration" : 16534
+        "start" : 1727208439306,
+        "stop" : 1727208454441,
+        "duration" : 15135
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест входа через кнопку «Личный кабинет»",
-      "uid" : "bb604a57c5bac73",
+      "uid" : "720f277b4939b630",
       "parentUid" : "b9a196f305ae86bf6bf452c18364a114",
       "status" : "failed",
       "time" : {
-        "start" : 1727026444380,
-        "stop" : 1727026461952,
-        "duration" : 17572
+        "start" : 1727208454453,
+        "stop" : 1727208470496,
+        "duration" : 16043
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест входа по кнопке «Войти в аккаунт» на главной",
-      "uid" : "213c9db0237da444",
+      "uid" : "4e19797356b4e789",
       "parentUid" : "b9a196f305ae86bf6bf452c18364a114",
       "status" : "failed",
       "time" : {
-        "start" : 1727026461960,
-        "stop" : 1727026479171,
-        "duration" : 17211
+        "start" : 1727208470507,
+        "stop" : 1727208486317,
+        "duration" : 15810
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест входа через кнопку в форме регистрации",
-      "uid" : "171c93ba852516aa",
+      "uid" : "1abb3ced365f6992",
       "parentUid" : "b9a196f305ae86bf6bf452c18364a114",
       "status" : "failed",
       "time" : {
-        "start" : 1727026479183,
-        "stop" : 1727026577884,
-        "duration" : 98701
+        "start" : 1727208486327,
+        "stop" : 1727208530091,
+        "duration" : 43764
       },
       "flaky" : false,
       "newFailed" : false,
@@ -78,39 +77,39 @@
     "name" : "ConstructorTest",
     "children" : [ {
       "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
-      "uid" : "a242e3c3dd3f0e12",
+      "uid" : "6c3298e76123c6ac",
       "parentUid" : "dff0921a1606ca5407799e0b2f49c3ad",
       "status" : "broken",
       "time" : {
-        "start" : 1727026578017,
-        "stop" : 1727026590053,
-        "duration" : 12036
+        "start" : 1727208530166,
+        "stop" : 1727208541843,
+        "duration" : 11677
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
-      "uid" : "7d852e0b127f5686",
+      "uid" : "ae602a2a2b18cb04",
       "parentUid" : "dff0921a1606ca5407799e0b2f49c3ad",
       "status" : "passed",
       "time" : {
-        "start" : 1727026590059,
-        "stop" : 1727026602020,
-        "duration" : 11961
+        "start" : 1727208541849,
+        "stop" : 1727208553168,
+        "duration" : 11319
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
-      "uid" : "caf573208c2bd89a",
+      "uid" : "8844ae572315272",
       "parentUid" : "dff0921a1606ca5407799e0b2f49c3ad",
       "status" : "passed",
       "time" : {
-        "start" : 1727026602026,
-        "stop" : 1727026614077,
-        "duration" : 12051
+        "start" : 1727208553182,
+        "stop" : 1727208564230,
+        "duration" : 11048
       },
       "flaky" : false,
       "newFailed" : false,
@@ -121,13 +120,13 @@
     "name" : "LogoutTest",
     "children" : [ {
       "name" : "Тест логаута пользователя по кнопке из личного кабинета",
-      "uid" : "162a3a7c36c0fa42",
+      "uid" : "b4c04eaa810f90ce",
       "parentUid" : "24d5c0a04a42db2509491ac919581f3b",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1727026614095,
-        "stop" : 1727026700587,
-        "duration" : 86492
+        "start" : 1727208564275,
+        "stop" : 1727208586620,
+        "duration" : 22345
       },
       "flaky" : false,
       "newFailed" : false,
@@ -138,26 +137,26 @@
     "name" : "FromProfileToMainTest",
     "children" : [ {
       "name" : "Тест перехода на главную по кнопке 'Конструктор'",
-      "uid" : "7f249627648d6b7b",
+      "uid" : "8ae36865533394b4",
       "parentUid" : "32be2cadda90291c63f6f8629a8316f7",
       "status" : "passed",
       "time" : {
-        "start" : 1727026700627,
-        "stop" : 1727026722476,
-        "duration" : 21849
+        "start" : 1727208586651,
+        "stop" : 1727208608996,
+        "duration" : 22345
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест перехода на главную по кнопке логотипа",
-      "uid" : "130e51277882e46",
+      "uid" : "9fbb9dcc4191f2e5",
       "parentUid" : "32be2cadda90291c63f6f8629a8316f7",
       "status" : "passed",
       "time" : {
-        "start" : 1727026722490,
-        "stop" : 1727026746420,
-        "duration" : 23930
+        "start" : 1727208609008,
+        "stop" : 1727208631569,
+        "duration" : 22561
       },
       "flaky" : false,
       "newFailed" : false,
@@ -168,31 +167,32 @@
     "name" : "RegisterTest",
     "children" : [ {
       "name" : "Тест на регистрацию нового пользователя",
-      "uid" : "f3c46d9aedec645",
+      "uid" : "fc3b8134d70580a0",
       "parentUid" : "2c14a2f95c0e1319e8e1ffe2822c5f7a",
       "status" : "passed",
       "time" : {
-        "start" : 1727026746467,
-        "stop" : 1727026761988,
-        "duration" : 15521
+        "start" : 1727208631620,
+        "stop" : 1727208645799,
+        "duration" : 14179
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Тест на регистрацию нового пользователя",
-      "uid" : "d5be83ad91fbce0a",
+      "uid" : "bf57ceceb35b3d0a",
       "parentUid" : "2c14a2f95c0e1319e8e1ffe2822c5f7a",
       "status" : "failed",
       "time" : {
-        "start" : 1727026761996,
-        "stop" : 1727026775275,
-        "duration" : 13279
+        "start" : 1727208645815,
+        "stop" : 1727208658097,
+        "duration" : 12282
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
     "uid" : "2c14a2f95c0e1319e8e1ffe2822c5f7a"
-  } ]
+  } ],
+  "name" : "suites"
 }

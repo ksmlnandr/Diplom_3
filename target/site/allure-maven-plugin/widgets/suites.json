@@ -34,28 +34,6 @@
       "total" : 3
     }
   }, {
-    "uid" : "36bdff280433b64a7dff0233d4474623",
-    "name" : "FromMainToProfileTest",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "24d5c0a04a42db2509491ac919581f3b",
-    "name" : "LogoutTest",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
     "uid" : "32be2cadda90291c63f6f8629a8316f7",
     "name" : "FromProfileToMainTest",
     "statistic" : {
@@ -65,6 +43,28 @@
       "passed" : 2,
       "unknown" : 0,
       "total" : 2
+    }
+  }, {
+    "uid" : "36bdff280433b64a7dff0233d4474623",
+    "name" : "FromMainToProfileTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "24d5c0a04a42db2509491ac919581f3b",
+    "name" : "LogoutTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
     }
   } ]
 }

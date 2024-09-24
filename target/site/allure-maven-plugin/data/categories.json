@@ -1,126 +1,70 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "name" : "categories",
   "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "element click intercepted: Element <p class=\"AppHeader_header__linkText__3q_va ml-2\">...</p> is not clickable at point (1112, 44). Other element would receive the click: <div class=\"Modal_modal_overlay__x2ZCr\"></div>\n  (Session info: chrome=128.0.6613.138)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [49168599c904c2b25957766e1e345256, clickElement {id=f.EB3FBE932F3E0D73DB4ED0A634482809.d.198124597980EC65359B67EFCD6B6779.e.40}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63861}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:63861/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (49168599c904c2b25957766e1e345256)] -> xpath: .//p[text() = 'Личный Кабинет']]\nSession ID: 49168599c904c2b25957766e1e345256",
-      "children" : [ {
-        "name" : "Тест перехода по клику на «Личный кабинет»",
-        "uid" : "e83a30fa6a146d76",
-        "parentUid" : "ee29efc866d24cc4899fb150395e552d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1727026289300,
-          "stop" : 1727026427708,
-          "duration" : 138408
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ee29efc866d24cc4899fb150395e552d"
-    }, {
-      "name" : "element click intercepted: Element <div class=\"tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect\">...</div> is not clickable at point (100, 215). Other element would receive the click: <div style=\"display: flex;\">...</div>\n  (Session info: chrome=128.0.6613.138)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [06bfbc078014e605b78e4f30c73103e5, clickElement {id=f.4402375595EA33AC27C7E57DFABF9357.d.95742199C89203B4D2E55FC37FDA7D3D.e.67}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65084/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (06bfbc078014e605b78e4f30c73103e5)] -> xpath: (.//span[text() = 'Булки']/parent::div)]\nSession ID: 06bfbc078014e605b78e4f30c73103e5",
-      "children" : [ {
-        "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
-        "uid" : "a242e3c3dd3f0e12",
-        "parentUid" : "0fa6cd057b783356ca8abb4374885f9e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1727026578017,
-          "stop" : 1727026590053,
-          "duration" : 12036
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "0fa6cd057b783356ca8abb4374885f9e"
-    }, {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\".//button[text() = 'Выход']\"}\n  (Session info: chrome=128.0.6613.138)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [7436683098f7728e8001021e05c1a6bf, findElement {value=.//button[text() = 'Выход'], using=xpath}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65288}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65288/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 7436683098f7728e8001021e05c1a6bf",
-      "children" : [ {
-        "name" : "Тест логаута пользователя по кнопке из личного кабинета",
-        "uid" : "162a3a7c36c0fa42",
-        "parentUid" : "121b6d39dc1284f30b6d3d00c1c05fbf",
-        "status" : "broken",
-        "time" : {
-          "start" : 1727026614095,
-          "stop" : 1727026700587,
-          "duration" : 86492
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "121b6d39dc1284f30b6d3d00c1c05fbf"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
     "name" : "Product defects",
     "children" : [ {
       "name" : "java.lang.AssertionError",
       "children" : [ {
         "name" : "Тест входа через кнопку в форме восстановления пароля",
-        "uid" : "51af11aa26af693b",
+        "uid" : "182bd1926b364bcf",
         "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
         "status" : "failed",
         "time" : {
-          "start" : 1727026427824,
-          "stop" : 1727026444358,
-          "duration" : 16534
+          "start" : 1727208439306,
+          "stop" : 1727208454441,
+          "duration" : 15135
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тест входа через кнопку «Личный кабинет»",
-        "uid" : "bb604a57c5bac73",
+        "uid" : "720f277b4939b630",
         "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
         "status" : "failed",
         "time" : {
-          "start" : 1727026444380,
-          "stop" : 1727026461952,
-          "duration" : 17572
+          "start" : 1727208454453,
+          "stop" : 1727208470496,
+          "duration" : 16043
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тест входа по кнопке «Войти в аккаунт» на главной",
-        "uid" : "213c9db0237da444",
+        "uid" : "4e19797356b4e789",
         "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
         "status" : "failed",
         "time" : {
-          "start" : 1727026461960,
-          "stop" : 1727026479171,
-          "duration" : 17211
+          "start" : 1727208470507,
+          "stop" : 1727208486317,
+          "duration" : 15810
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тест входа через кнопку в форме регистрации",
-        "uid" : "171c93ba852516aa",
+        "uid" : "1abb3ced365f6992",
         "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
         "status" : "failed",
         "time" : {
-          "start" : 1727026479183,
-          "stop" : 1727026577884,
-          "duration" : 98701
+          "start" : 1727208486327,
+          "stop" : 1727208530091,
+          "duration" : 43764
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Тест на регистрацию нового пользователя",
-        "uid" : "d5be83ad91fbce0a",
+        "uid" : "bf57ceceb35b3d0a",
         "parentUid" : "8c5a12edd58a5b39ca043c7c2ab86098",
         "status" : "failed",
         "time" : {
-          "start" : 1727026761996,
-          "stop" : 1727026775275,
-          "duration" : 13279
+          "start" : 1727208645815,
+          "stop" : 1727208658097,
+          "duration" : 12282
         },
         "flaky" : false,
         "newFailed" : false,
@@ -129,5 +73,27 @@
       "uid" : "8c5a12edd58a5b39ca043c7c2ab86098"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ]
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element click intercepted: Element <div class=\"tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect\">...</div> is not clickable at point (100, 215). Other element would receive the click: <div style=\"display: flex;\">...</div>\n  (Session info: chrome=129.0.6668.59)\nBuild info: version: '4.24.0', revision: '748ffc9bc3'\nSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.0', java.version: '11.0.23'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [ff39b0f8c758e4d00c0d48a80f7bc719, clickElement {id=f.F7C5240266335C0599DD9953DC94B6EF.d.6A1161F5EA97A0877DDD815C431A5852.e.65}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: /var/folders/ts/_y5sfbvn5v1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62240}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62240/devtoo..., se:cdpVersion: 129.0.6668.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nElement: [[ChromeDriver: chrome on mac (ff39b0f8c758e4d00c0d48a80f7bc719)] -> xpath: (.//span[text() = 'Булки']/parent::div)]\nSession ID: ff39b0f8c758e4d00c0d48a80f7bc719",
+      "children" : [ {
+        "name" : "Тест на переход к разделу с ингредиентами на странице Конструктора",
+        "uid" : "6c3298e76123c6ac",
+        "parentUid" : "c8556e02637c2ed51a24e796c5db2035",
+        "status" : "broken",
+        "time" : {
+          "start" : 1727208530166,
+          "stop" : 1727208541843,
+          "duration" : 11677
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c8556e02637c2ed51a24e796c5db2035"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
 }
